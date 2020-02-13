@@ -6,7 +6,6 @@ namespace Game
     {
         [SerializeField] private SpawnableObject[] _spawnableObjects;
         [SerializeField] private Float _gameSpeed;
-        [SerializeField] private float _spawnRate = 1;
         private float _timeToNextSpawn;
 
         private void Awake()
@@ -29,7 +28,7 @@ namespace Game
                         break;
                 }
 
-                _timeToNextSpawn = _gameSpeed.Value / _spawnRate;
+                _timeToNextSpawn = 1 / _gameSpeed.Value;
             }
 
         }
