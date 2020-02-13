@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8223023396425470870}
   - component: {fileID: 8223023396425470869}
+  - component: {fileID: 952456665}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -47,3 +48,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 659d4e67706b2e04285fe07fbab8b0d5, type: 2}
   - {fileID: 11400000, guid: 7a2c040e7b521a84680c324cde285d48, type: 2}
   _gameSpeed: {fileID: 11400000, guid: 3b36109a072b0794ca325dea5e20a2ff, type: 2}
+--- !u!114 &952456665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8223023396425470871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347fd48d94b891b44816bee692e115bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
