@@ -273,31 +273,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d84cff7394adfa46ac0484a6d451351, type: 3}
---- !u!1 &1399562688 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3228121340358298198, guid: a1f76407be02a3d4d946b2bf07b4ca13,
-    type: 3}
-  m_PrefabInstance: {fileID: 3228121338958949270}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1399562689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399562688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bcfa4a1daf3b084082d78ff1d749fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _jumpForce: 7
-  _fastJumpMuliplier: 2.5
-  _fallMultipier: 2
-  _groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  _jumpKey: 32
 --- !u!1001 &3228121338958949270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -305,10 +280,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1399562690, guid: a1f76407be02a3d4d946b2bf07b4ca13, type: 3}
-      propertyPath: m_Constraints
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 3228121340358298196, guid: a1f76407be02a3d4d946b2bf07b4ca13,
         type: 3}
       propertyPath: m_LocalPosition.x

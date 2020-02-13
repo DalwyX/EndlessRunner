@@ -46,6 +46,4 @@ MonoBehaviour:
   _spawnableObjects:
   - {fileID: 11400000, guid: 659d4e67706b2e04285fe07fbab8b0d5, type: 2}
   - {fileID: 11400000, guid: 7a2c040e7b521a84680c324cde285d48, type: 2}
-  - {fileID: 11400000, guid: e50d586eeebfe7d44897661044a2c3a2, type: 2}
-  - {fileID: 11400000, guid: ce0d3488f07a50246b78c488190eb832, type: 2}
   _gameSpeed: {fileID: 11400000, guid: 3b36109a072b0794ca325dea5e20a2ff, type: 2}

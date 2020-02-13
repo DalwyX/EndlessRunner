@@ -14,7 +14,7 @@ namespace Game
                 return;
 
             var translation = _baseSpeed.Value * _speedModifier * Time.deltaTime * _moveDirection;
-            transform.Translate(translation);
+            transform.Translate(translation, Space.World);
         }
     } 
 }
