@@ -38,7 +38,8 @@ namespace Game
             var r = Random.Range(0f, 1f);
             if (r < spawnableObject.Rarety && spawnableObject.Prefab != null)
             {
-                Instantiate(spawnableObject.Prefab, transform.position, Quaternion.identity, transform);
+                var spawnPosition = transform.position + spawnableObject.GetSpawnOffset();
+                Instantiate(spawnableObject.Prefab, spawnPosition, Quaternion.identity, transform);
                 return true;
             }
 
