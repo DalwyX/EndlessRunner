@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 27afae5a9e3e0f84186f58b6ccdd4ed8, type: 3}
-  m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
+  m_Color: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -94,7 +94,9 @@ GameObject:
   - component: {fileID: 8233925549991167588}
   - component: {fileID: 1399562690}
   - component: {fileID: 1399562689}
+  - component: {fileID: -4075398207509068296}
   - component: {fileID: 2690351342129088936}
+  - component: {fileID: 2010797372}
   - component: {fileID: 6142740374451978842}
   m_Layer: 0
   m_Name: Player
@@ -240,7 +242,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 1
 --- !u!58 &1399562689
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -257,6 +259,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &-4075398207509068296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228121340358298198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd7bfe6c6a42434daabe74fcc8f5c33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _baseSpeed: {fileID: 11400000, guid: 3b36109a072b0794ca325dea5e20a2ff, type: 2}
+  _startingSpeed: 3
+  _maxSpeed: 16
+  _accelerationPerSecond: 0.1
 --- !u!114 &2690351342129088936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +294,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   _jumpKey: 32
+--- !u!114 &2010797372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228121340358298198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9557d618b80fc124482da8c0cda98af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotationAxis: {x: 0, y: 0, z: -1}
+  _baseSpeed: {fileID: 11400000, guid: 3b36109a072b0794ca325dea5e20a2ff, type: 2}
+  _modifier: 1
 --- !u!114 &6142740374451978842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,7 +392,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 27afae5a9e3e0f84186f58b6ccdd4ed8, type: 3}
-  m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
+  m_Color: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
