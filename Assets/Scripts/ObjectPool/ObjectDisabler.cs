@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Game
+namespace ObjectPool
 {
     public class ObjectDisabler : MonoBehaviour
     {

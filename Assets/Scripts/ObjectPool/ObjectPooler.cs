@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game
+namespace ObjectPool
 {
-    public class ObjectPool : MonoBehaviour
+    public class ObjectPooler : MonoBehaviour
     {
         private Dictionary<GameObject, List<PooledObject>> _pool = new Dictionary<GameObject, List<PooledObject>>();
 

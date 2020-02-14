@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ffa08dbd2b048c0419300b58c12cbcb3, type: 3}
-  m_Name: Coin
+  m_Name: Coin #2
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 809007856999866907, guid: 8ae4f9895576b44448269b17e49c7d31, type: 3}
-  _rarety: 0.375
+  _prefab: {fileID: 809007856999866907, guid: 347a99dda9f310d49b2dadf6321884d5, type: 3}
+  _rarety: 0.015
