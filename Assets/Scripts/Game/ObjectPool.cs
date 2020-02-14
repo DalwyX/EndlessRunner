@@ -28,8 +28,9 @@ namespace Game
                 }
             }
 
-            int nextInactiveObject = Expand(go, root);
-            return SetParams(_pool[go][nextInactiveObject].Get(), pos, rot, root);
+            var newObject = new PooledObject(go, root);
+            _pool[go].Add(newObject);
+            return SetParams(newObject.Get(), pos, rot, root);
         }
 
         private GameObject SetParams(GameObject go, Vector2 pos, Quaternion rot, Transform root)
@@ -38,16 +39,6 @@ namespace Game
             go.transform.rotation = rot;
             go.transform.parent = root;
             return go;
-        }
-
-        private int Expand(GameObject go, Transform objTransform)
-        {
-            int count = _pool[go].Count;
-            for (int i = 0; i < count; i++)
-            {
-                _pool[go].Add(new PooledObject(go, objTransform));
-            }
-            return count;
         }
     }
 }
