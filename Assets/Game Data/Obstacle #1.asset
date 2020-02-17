@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Obstacle #1
   m_EditorClassIdentifier: 
   _prefab: {fileID: 2097045371004884785, guid: a54d34981c0e8fe4d84477cca1bf6742, type: 3}
-  _rarety: 0.06
+  _rarity: 0.06

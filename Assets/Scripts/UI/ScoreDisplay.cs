@@ -31,7 +31,7 @@ namespace UI
         private void UpdateValue()
         {
             if (_scoreCounter != null)
-                _textField.text = _scoreCounter.currentScore.ToString();
+                _textField.text = _scoreCounter._currentScore.ToString();
         }
     } 
 }

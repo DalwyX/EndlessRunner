@@ -27,12 +27,16 @@ namespace Game
 
         private void FixedUpdate()
         {
-            _rb.gravityScale = (_rb.velocity.y < 0) ? _fallMultipier : ((!Input.GetKey(_jumpKey)) ? _fastJumpMuliplier : 1);
+            if (_rb.velocity.y != 0)
+            {
+                _rb.gravityScale = (_rb.velocity.y < 0) ? _fallMultipier :
+                                   ((!Input.GetKey(_jumpKey)) ? _fastJumpMuliplier : 1);
+            }
         }
 
         private bool IsOnGround()
         {
             return _rb.IsTouchingLayers(_groundLayer);
         }
-    } 
+    }
 }

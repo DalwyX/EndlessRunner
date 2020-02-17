@@ -40,7 +40,7 @@ namespace Game
         private bool TrySpawnObject(SpawnableObject spawnableObject)
         {
             var r = Random.Range(0f, 1f);
-            if (r < spawnableObject.Rarety && spawnableObject.Prefab != null)
+            if (r < spawnableObject.Rarity && spawnableObject.Prefab != null)
             {
                 _objectPool.Instantiate(spawnableObject.Prefab, transform.position, Quaternion.identity, transform);
                 return true;

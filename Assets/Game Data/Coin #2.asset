@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Coin #2
   m_EditorClassIdentifier: 
   _prefab: {fileID: 809007856999866907, guid: 347a99dda9f310d49b2dadf6321884d5, type: 3}
-  _rarety: 0.015
+  _rarity: 0.012

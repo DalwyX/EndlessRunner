@@ -7,15 +7,16 @@ namespace Game
         [SerializeField] private Vector3 _rotationAxis;
         [SerializeField] private Float _baseSpeed;
         [SerializeField] private float _modifier;
-
-        private void Awake()
+        
+        private void OnValidate()
         {
             _rotationAxis = _rotationAxis.normalized;
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
-            transform.Rotate(_rotationAxis, _baseSpeed.Value * _modifier);
+            var rotationThisFrame = _baseSpeed.Value * _modifier * Time.deltaTime;
+            transform.Rotate(_rotationAxis, rotationThisFrame);
         }
     } 
 }

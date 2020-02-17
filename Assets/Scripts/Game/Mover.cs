@@ -8,6 +8,11 @@ namespace Game
         [SerializeField] private float _speedModifier = 1;
         [SerializeField] private Vector2 _moveDirection;
 
+        private void OnValidate()
+        {
+            _moveDirection = _moveDirection.normalized;
+        }
+
         private void Update()
         {
             if (_baseSpeed == null)

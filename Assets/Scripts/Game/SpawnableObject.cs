@@ -6,9 +6,9 @@ namespace Game
     public class SpawnableObject : ScriptableObject
     {
         [SerializeField] private GameObject _prefab;
-        [SerializeField, Range(0, 1)] private float _rarety;
+        [SerializeField, Range(0, 1)] private float _rarity;
 
         public GameObject Prefab => _prefab;
-        public float Rarety => _rarety;
+        public float Rarity => _rarity;
     } 
 }
