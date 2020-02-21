@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Game
 {
@@ -13,11 +14,16 @@ namespace Game
             _moveDirection = _moveDirection.normalized;
         }
 
-        private void Update()
+        private void Awake()
         {
             if (_baseSpeed == null)
-                return;
+            {
+                throw new NullReferenceException("_baseSpeed not assigned in " + this);
+            }
+        }
 
+        private void Update()
+        {
             var translation = _baseSpeed.Value * _speedModifier * Time.deltaTime * _moveDirection;
             transform.Translate(translation, Space.World);
         }

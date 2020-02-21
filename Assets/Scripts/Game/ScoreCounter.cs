@@ -5,13 +5,13 @@ namespace Game
 {
     public class ScoreCounter : MonoBehaviour
     {
-        public int _currentScore { get; private set; }
-        public event Action ScoreUpdated;
+        public int Amount { get; private set; }
+        public event Action Changed;
 
-        public void AddScore(int val)
+        public void AddScore(int value)
         {
-            _currentScore += val;
-            ScoreUpdated?.Invoke();
+            Amount += value;
+            Changed?.Invoke();
         }
     } 
 }

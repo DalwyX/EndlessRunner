@@ -5,16 +5,14 @@ namespace Game
     public class Coin : MonoBehaviour
     {
         [SerializeField] private int _coinValue = 1;
-        
-        private void OnTriggerEnter2D(Collider2D other)
+
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            var counter = other.GetComponent<ScoreCounter>();
-            if (counter != null)
+            if (collision.TryGetComponent<ScoreCounter>(out var counter))
             {
                 counter.AddScore(_coinValue);
                 gameObject.SetActive(false);
             }
-
         }
     } 
 }

@@ -19,19 +19,19 @@ namespace UI
         private void OnEnable()
         {
             if (_scoreCounter != null)
-                _scoreCounter.ScoreUpdated += UpdateValue;
+                _scoreCounter.Changed += UpdateValue;
         }
 
         private void OnDisable()
         {
             if (_scoreCounter != null)
-                _scoreCounter.ScoreUpdated -= UpdateValue;
+                _scoreCounter.Changed -= UpdateValue;
         }
 
         private void UpdateValue()
         {
             if (_scoreCounter != null)
-                _textField.text = _scoreCounter._currentScore.ToString();
+                _textField.text = _scoreCounter.Amount.ToString();
         }
     } 
 }

@@ -1,19 +1,19 @@
 ﻿using UnityEngine;
-using ObjectPool;
+using Pool;
 
 namespace Game
 {
-    [RequireComponent(typeof(ObjectPooler))]
+    [RequireComponent(typeof(ObjectPool))]
     public class Spawner : MonoBehaviour
     {
         [SerializeField] private SpawnableObject[] _spawnableObjects;
         [SerializeField] private Float _gameSpeed;
-        private ObjectPooler _objectPool;
+        private ObjectPool _objectPool;
         private float _timeToNextSpawn;
 
         private void Awake()
         {
-            _objectPool = GetComponent<ObjectPooler>();
+            _objectPool = GetComponent<ObjectPool>();
             _timeToNextSpawn = 0;
         }
 

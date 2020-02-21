@@ -10,33 +10,40 @@ namespace Game
         [SerializeField] private float _fallMultipier = 2.5f;
         [SerializeField] private LayerMask _groundLayer;
         [SerializeField] private KeyCode _jumpKey;
-        private Rigidbody2D _rb;
+        private Rigidbody2D _rigidbody;
 
         private void Awake()
         {
-            _rb = GetComponent<Rigidbody2D>();
+            _rigidbody = GetComponent<Rigidbody2D>();
         }
 
         private void Update()
         {
             if (Input.GetKeyDown(_jumpKey) && IsOnGround())
             {
-                _rb.AddForce(_jumpForce * Vector2.up, ForceMode2D.Impulse);
+                _rigidbody.AddForce(_jumpForce * Vector2.up, ForceMode2D.Impulse);
             }
         }
 
         private void FixedUpdate()
         {
-            if (_rb.velocity.y != 0)
+            if (_rigidbody.velocity.y < 0)
             {
-                _rb.gravityScale = (_rb.velocity.y < 0) ? _fallMultipier :
-                                   ((!Input.GetKey(_jumpKey)) ? _fastJumpMuliplier : 1);
+                _rigidbody.gravityScale = _fallMultipier;
+            }
+            else if (_rigidbody.velocity.y > 0 && !Input.GetKey(_jumpKey))
+            {
+                _rigidbody.gravityScale = _fastJumpMuliplier;
+            }
+            else
+            {
+                _rigidbody.gravityScale = 1;
             }
         }
 
         private bool IsOnGround()
         {
-            return _rb.IsTouchingLayers(_groundLayer);
+            return _rigidbody.IsTouchingLayers(_groundLayer);
         }
     }
 }
