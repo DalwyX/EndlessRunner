@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8223023396425470870}
   - component: {fileID: 8223023396425470869}
-  - component: {fileID: 7386802140249421225}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -44,21 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425316f6335785f488a406537ff3d8eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnableObjects:
-  - {fileID: 11400000, guid: 60438ab8193d4324994b039a611a9fc4, type: 2}
-  - {fileID: 11400000, guid: d8cb1246adac4844f86ac3d8dab8af6c, type: 2}
-  - {fileID: 11400000, guid: 659d4e67706b2e04285fe07fbab8b0d5, type: 2}
-  - {fileID: 11400000, guid: 7a2c040e7b521a84680c324cde285d48, type: 2}
-  _gameSpeed: {fileID: 11400000, guid: 3b36109a072b0794ca325dea5e20a2ff, type: 2}
---- !u!114 &7386802140249421225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8223023396425470871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8770f4fa0de76ab4dafd06d5267ab7c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _chunks:
+  - {fileID: 3874303908980845834, guid: 75128b41a6f166a43880493fa634f2fd, type: 3}
+  - {fileID: 9188318271164359514, guid: bed3fb92cdeb3674ab60ebe85a851bda, type: 3}
+  - {fileID: 3605705752267398144, guid: 59aaf8f39da4d9247afa2f31b7fa26bd, type: 3}
+  _chunkSize: 8
+  _objectPool: {fileID: 0}

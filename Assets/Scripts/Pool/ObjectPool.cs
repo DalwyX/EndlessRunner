@@ -7,7 +7,12 @@ namespace Pool
     {
         private Dictionary<GameObject, List<GameObject>> _pool = new Dictionary<GameObject, List<GameObject>>();
 
-        public GameObject Instantiate(GameObject gameObject, Vector2 position, Quaternion rotation, Transform root)
+        public GameObject SpawnObject(GameObject gameObject, Vector2 position, Quaternion rotation)
+        {
+            return SpawnObject(gameObject, position, rotation, transform);
+        }
+
+        public GameObject SpawnObject(GameObject gameObject, Vector2 position, Quaternion rotation, Transform root)
         {
             if (!_pool.ContainsKey(gameObject))
             {
@@ -32,7 +37,7 @@ namespace Pool
 
         private GameObject AddObject(GameObject gameObject)
         {
-            var newObject =  Instantiate(gameObject);
+            var newObject = Instantiate(gameObject);
             _pool[gameObject].Add(newObject);
             return newObject;
         }
