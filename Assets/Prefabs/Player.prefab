@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4dccde0bd06a7449867ed942406d9d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 4
+  _speed: 6.4
   _moveDirection: {x: 1, y: 0}
 --- !u!114 &1479842934679480813
 MonoBehaviour:
@@ -62,9 +62,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bcfa4a1daf3b084082d78ff1d749fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _jumpForce: 5
+  _jumpForce: 8.5
   _fastJumpMuliplier: 2
-  _fallMultipier: 2.5
+  _fallMultipier: 3
   _groundLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -101,7 +101,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &8504371185861815027
 BoxCollider2D:
   m_ObjectHideFlags: 0
