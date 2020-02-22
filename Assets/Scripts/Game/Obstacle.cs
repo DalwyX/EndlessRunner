@@ -7,10 +7,10 @@ namespace Game
     {
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.collider.GetComponent<Player>() != null)
-            {
-                SceneManager.LoadScene(0);
-            }
+            //if (collision.collider.GetComponent<Player>() != null)
+            //{
+            //    SceneManager.LoadScene(0);
+            //}
         }
     } 
 }
