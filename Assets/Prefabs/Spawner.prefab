@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8223023396425470870}
   - component: {fileID: 8223023396425470869}
-  - component: {fileID: 7386802140249421225}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -50,15 +49,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 659d4e67706b2e04285fe07fbab8b0d5, type: 2}
   - {fileID: 11400000, guid: 7a2c040e7b521a84680c324cde285d48, type: 2}
   _gameSpeed: {fileID: 11400000, guid: 3b36109a072b0794ca325dea5e20a2ff, type: 2}
---- !u!114 &7386802140249421225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8223023396425470871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8770f4fa0de76ab4dafd06d5267ab7c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
