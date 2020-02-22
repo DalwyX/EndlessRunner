@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8223023396425470870}
   - component: {fileID: 8223023396425470869}
+  - component: {fileID: 923186303}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8223023396425470871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16, y: -4.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -49,3 +50,20 @@ MonoBehaviour:
   - {fileID: 3605705752267398144, guid: 59aaf8f39da4d9247afa2f31b7fa26bd, type: 3}
   _chunkSize: 8
   _objectPool: {fileID: 0}
+--- !u!114 &923186303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8223023396425470871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3513b14113ea543987bd4c4e360732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _target: {fileID: 0}
+  _offset: {x: 24, y: 0, z: 0}
+  _lockXAxis: 0
+  _lockYAxis: 1
+  _lockZAxis: 1
