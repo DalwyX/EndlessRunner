@@ -3,11 +3,16 @@ using UnityEngine;
 
 namespace Pool
 {
-    public static class ObjectPool
+    public class ObjectPool : MonoBehaviour
     {
-        private static Dictionary<GameObject, List<GameObject>> _pool = new Dictionary<GameObject, List<GameObject>>();
+        private Dictionary<GameObject, List<GameObject>> _pool = new Dictionary<GameObject, List<GameObject>>();
 
-        public static GameObject Instantiate(GameObject gameObject, Vector2 position, Quaternion rotation, Transform root)
+        public GameObject SpawnObject(GameObject gameObject, Vector2 position, Quaternion rotation)
+        {
+            return SpawnObject(gameObject, position, rotation, transform);
+        }
+
+        public GameObject SpawnObject(GameObject gameObject, Vector2 position, Quaternion rotation, Transform root)
         {
             if (!_pool.ContainsKey(gameObject))
             {
@@ -30,14 +35,14 @@ namespace Pool
             return SetParams(newObject, position, rotation, root);
         }
 
-        private static GameObject AddObject(GameObject gameObject)
+        private GameObject AddObject(GameObject gameObject)
         {
-            var newObject = Object.Instantiate(gameObject);
+            var newObject = Instantiate(gameObject);
             _pool[gameObject].Add(newObject);
             return newObject;
         }
 
-        private static GameObject SetParams(GameObject go, Vector2 pos, Quaternion rot, Transform root)
+        private GameObject SetParams(GameObject go, Vector2 pos, Quaternion rot, Transform root)
         {
             go.transform.parent = root;
             go.transform.position = pos;
