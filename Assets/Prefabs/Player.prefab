@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8504371185861815026}
   - component: {fileID: 8504371185861815029}
   - component: {fileID: 1479842934679480813}
+  - component: {fileID: 4579917301833628631}
   - component: {fileID: 8504371185861815030}
   - component: {fileID: 8504371185861815028}
   - component: {fileID: 8504371185861815027}
@@ -69,6 +70,44 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   _jumpKey: 32
+--- !u!114 &4579917301833628631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8504371185861815025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46581920ddc50f448822dead71b23433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endGameDelay: 5
+  Died:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8504371185861815029}
+        m_MethodName: StopMovement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1479842934679480813}
+        m_MethodName: StopJumping
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8504371185861815030
 MonoBehaviour:
   m_ObjectHideFlags: 0

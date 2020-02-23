@@ -6,6 +6,7 @@ namespace Movement
     {
         [SerializeField] private float _speed;
         [SerializeField] private Vector2 _moveDirection;
+        private bool _isBlocked;
 
         private void OnValidate()
         {
@@ -15,8 +16,16 @@ namespace Movement
 
         private void Update()
         {
+            if (_isBlocked)
+                return;
+
             var translation = _speed * Time.deltaTime * _moveDirection;
             transform.Translate(translation);
+        }
+
+        public void StopMovement()
+        {
+            _isBlocked = true;
         }
     } 
 }

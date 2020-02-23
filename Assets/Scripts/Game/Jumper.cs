@@ -11,6 +11,7 @@ namespace Game
         [SerializeField] private LayerMask _groundLayer;
         [SerializeField] private KeyCode _jumpKey;
         private Rigidbody2D _rigidbody;
+        private bool _isBlocked;
 
         private void Awake()
         {
@@ -19,7 +20,7 @@ namespace Game
 
         private void Update()
         {
-            if (Input.GetKeyDown(_jumpKey) && IsOnGround())
+            if (Input.GetKeyDown(_jumpKey) && IsOnGround() && !_isBlocked)
             {
                 _rigidbody.AddForce(_jumpForce * Vector2.up, ForceMode2D.Impulse);
             }
@@ -39,6 +40,11 @@ namespace Game
             {
                 _rigidbody.gravityScale = 1;
             }
+        }
+
+        public void StopJumping()
+        {
+            _isBlocked = true;
         }
 
         private bool IsOnGround()
