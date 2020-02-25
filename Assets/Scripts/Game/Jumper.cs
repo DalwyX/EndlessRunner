@@ -18,8 +18,6 @@ namespace Game
         [SerializeField] private float _fallMultipier = 2.5f;
         [SerializeField] private LayerMask _groundLayer;
         [SerializeField] private KeyCode _jumpKey;
-        [SerializeField] private UnityEvent _jumped;
-        [SerializeField] private UnityEvent _grounded;
         private Rigidbody2D _rigidbody;
         private State _state;
         private bool _isBlocked;
@@ -57,7 +55,7 @@ namespace Game
         {
             if (Input.GetKeyDown(_jumpKey) && !_isBlocked)
             {
-                _jumped?.Invoke();
+                //_jumped?.Invoke();
                 _rigidbody.AddForce(_jumpForce * Vector2.up, ForceMode2D.Impulse);
                 _state = State.Jumping;
             }
@@ -85,7 +83,7 @@ namespace Game
             if (IsOnGround())
             {
                 _rigidbody.gravityScale = 1;
-                _grounded?.Invoke();
+                //_grounded?.Invoke();
                 _state = State.Grounded;
             }
             else
