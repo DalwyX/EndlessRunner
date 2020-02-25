@@ -8,13 +8,13 @@ namespace Game
 {
     public class Health : MonoBehaviour
     {
-        [SerializeField] private float endGameDelay;
-        [SerializeField] private UnityEvent Died;
+        [SerializeField] private float _gameOverDelay;
+        [SerializeField] private UnityEvent _died;
 
         public async void TakeDamage()
         {
-            Died?.Invoke();
-            await Task.Delay(TimeSpan.FromSeconds(endGameDelay));
+            _died?.Invoke();
+            await Task.Delay(TimeSpan.FromSeconds(_gameOverDelay));
             SceneManager.LoadScene(0);
         }
     } 

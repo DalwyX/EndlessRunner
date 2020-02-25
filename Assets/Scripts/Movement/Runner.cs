@@ -19,8 +19,8 @@ namespace Movement
             if (_isBlocked)
                 return;
 
-            var translation = _speed * Time.deltaTime * _moveDirection;
-            transform.Translate(translation);
+            var transition = _speed * Time.deltaTime * _moveDirection;
+            transform.Translate(transition);
         }
 
         public void StopMovement()

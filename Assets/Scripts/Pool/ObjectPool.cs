@@ -42,13 +42,13 @@ namespace Pool
             return newObject;
         }
 
-        private GameObject SetParams(GameObject go, Vector2 pos, Quaternion rot, Transform root)
+        private GameObject SetParams(GameObject gameObject, Vector2 position, Quaternion rotation, Transform root)
         {
-            go.transform.parent = root;
-            go.transform.position = pos;
-            go.transform.rotation = rot;
-            go.SetActive(true);
-            return go;
+            gameObject.transform.parent = root;
+            gameObject.transform.position = position;
+            gameObject.transform.rotation = rotation;
+            gameObject.SetActive(true);
+            return gameObject;
         }
     }
 }

@@ -48,6 +48,8 @@ MonoBehaviour:
   - {fileID: 3874303908980845834, guid: 75128b41a6f166a43880493fa634f2fd, type: 3}
   - {fileID: 9188318271164359514, guid: bed3fb92cdeb3674ab60ebe85a851bda, type: 3}
   - {fileID: 3605705752267398144, guid: 59aaf8f39da4d9247afa2f31b7fa26bd, type: 3}
+  - {fileID: 9188318271164359514, guid: 2b1fcdcc1fbe8664386a2bee591aadf3, type: 3}
+  - {fileID: 9188318271164359514, guid: bdc1476099805b642ae02e24ec44707a, type: 3}
   _chunkSize: 8
   _objectPool: {fileID: 0}
 --- !u!114 &923186303
@@ -63,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
-  _offset: {x: 24, y: 0, z: 0}
+  _offset: {x: 32, y: 0, z: 0}
   _lockXAxis: 0
   _lockYAxis: 1
   _lockZAxis: 1

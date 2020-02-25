@@ -20,17 +20,17 @@ namespace FSM
             _state?.Execute(this, _owner);
         }
 
-        public void ChangeState(Type type)
+        public void ChangeState(Type state)
         {
             _state?.Exit(this, _owner);
-            if (_statesDictionary.ContainsKey(type))
+            if (_statesDictionary.ContainsKey(state))
             {
-                _state = _statesDictionary[type];
+                _state = _statesDictionary[state];
             }
             else
             {
-                var newState = (IState<T>)Activator.CreateInstance(type);
-                _statesDictionary.Add(type, newState);
+                var newState = (IState<T>)Activator.CreateInstance(state);
+                _statesDictionary.Add(state, newState);
                 _state = newState;
             }
             _state?.Enter(this, _owner);
