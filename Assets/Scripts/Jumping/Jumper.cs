@@ -3,7 +3,7 @@ using FSM;
 
 namespace Jumping
 {
-    [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
     public class Jumper : MonoBehaviour
     {
         [SerializeField] private float _jumpForce;
