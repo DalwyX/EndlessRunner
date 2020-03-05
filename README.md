@@ -1,2 +1,2 @@
-# RollingBall
+# EndlessRunner
 IJunior test project
